@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://bank_ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://bank_ws/">
+
+<xs:element name="IOException" type="tns:IOException"/>
+
+<xs:element name="deleteCustomer" type="tns:deleteCustomer"/>
+
+<xs:element name="deleteCustomerResponse" type="tns:deleteCustomerResponse"/>
+
+<xs:element name="deleteEmployee" type="tns:deleteEmployee"/>
+
+<xs:element name="deleteEmployeeResponse" type="tns:deleteEmployeeResponse"/>
+
+<xs:element name="editCustomer" type="tns:editCustomer"/>
+
+<xs:element name="editCustomerResponse" type="tns:editCustomerResponse"/>
+
+<xs:element name="editEmployee" type="tns:editEmployee"/>
+
+<xs:element name="editEmployeeResponse" type="tns:editEmployeeResponse"/>
+
+<xs:element name="employeeLogin" type="tns:employeeLogin"/>
+
+<xs:element name="employeeLoginResponse" type="tns:employeeLoginResponse"/>
+
+<xs:element name="getCustomer" type="tns:getCustomer"/>
+
+<xs:element name="getCustomerDetails" type="tns:getCustomerDetails"/>
+
+<xs:element name="getCustomerDetailsResponse" type="tns:getCustomerDetailsResponse"/>
+
+<xs:element name="getCustomerResponse" type="tns:getCustomerResponse"/>
+
+<xs:element name="getEmployeeDetails" type="tns:getEmployeeDetails"/>
+
+<xs:element name="getEmployeeDetailsResponse" type="tns:getEmployeeDetailsResponse"/>
+
+<xs:element name="getNumberOfCustomers" type="tns:getNumberOfCustomers"/>
+
+<xs:element name="getNumberOfCustomersResponse" type="tns:getNumberOfCustomersResponse"/>
+
+<xs:element name="readCustomerFile" type="tns:readCustomerFile"/>
+
+<xs:element name="readCustomerFileResponse" type="tns:readCustomerFileResponse"/>
+
+<xs:element name="readUsersFile" type="tns:readUsersFile"/>
+
+<xs:element name="readUsersFileResponse" type="tns:readUsersFileResponse"/>
+
+<xs:element name="registerCustomer" type="tns:registerCustomer"/>
+
+<xs:element name="registerCustomerResponse" type="tns:registerCustomerResponse"/>
+
+<xs:element name="registerEmployee" type="tns:registerEmployee"/>
+
+<xs:element name="registerEmployeeResponse" type="tns:registerEmployeeResponse"/>
+
+<xs:element name="updateCustomerFile" type="tns:updateCustomerFile"/>
+
+<xs:element name="updateCustomerFileResponse" type="tns:updateCustomerFileResponse"/>
+
+<xs:complexType name="editCustomer">
+<xs:sequence>
+<xs:element name="originalAccountNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerAccountNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerName" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerBirthday" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerMobile" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerEmail" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerAccountType" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerSortCode" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerBalance" type="xs:string" minOccurs="0"/>
+<xs:element name="newCustomerCardNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerEmployee">
+<xs:sequence>
+<xs:element name="newEmployeeName" type="xs:string" minOccurs="0"/>
+<xs:element name="newEmployeePosition" type="xs:string" minOccurs="0"/>
+<xs:element name="newEmployeeUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="newEmployeePassword" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerEmployeeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomer">
+<xs:sequence>
+<xs:element name="number" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNumberOfCustomers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNumberOfCustomersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCustomer">
+<xs:sequence>
+<xs:element name="customerNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerDetails">
+<xs:sequence>
+<xs:element name="customerNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readUsersFile">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="readUsersFileResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="editEmployee">
+<xs:sequence>
+<xs:element name="originalEmployeeUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="employeeName" type="xs:string" minOccurs="0"/>
+<xs:element name="employeePosition" type="xs:string" minOccurs="0"/>
+<xs:element name="employeeUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="employeePassword" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEmployeeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="employeeLogin">
+<xs:sequence>
+<xs:element name="employeeUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="employeePassword" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="employeeLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEmployeeDetails">
+<xs:sequence>
+<xs:element name="employeeUsername" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEmployeeDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEmployee">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEmployeeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerCustomer">
+<xs:sequence>
+<xs:element name="customerName" type="xs:string" minOccurs="0"/>
+<xs:element name="customerBirthday" type="xs:string" minOccurs="0"/>
+<xs:element name="customerAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="customerMobile" type="xs:string" minOccurs="0"/>
+<xs:element name="customerEmail" type="xs:string" minOccurs="0"/>
+<xs:element name="customerAccountType" type="xs:string" minOccurs="0"/>
+<xs:element name="customerAccountNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="customerSortCode" type="xs:string" minOccurs="0"/>
+<xs:element name="customerBalance" type="xs:string" minOccurs="0"/>
+<xs:element name="customerCardNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readCustomerFile">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="readCustomerFileResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerFile">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerFileResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
